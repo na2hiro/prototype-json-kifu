@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+<script src="shogi.js"></script>
+<style type="text/css">p{white-space: pre}</style>
+
+<h1><a href="./sample.kif">KIFファイル</a>を読み込み</h1>
+
+<h2>ルールを読み込んだところ</h2>
+<p id="ban1"></p>
+
+<h2>KIFファイルを読み込んだところ</h2>
+<p id="ban2"></p>
+
+<h2>棋譜を出力</h2>
+<textarea cols=100 rows=20 id="kifu"></textarea>
+
+<script>
+var shogi = new PrintableShogi();
+shogi.openRuleFile("hirate.rule.json");
+document.getElementById("ban1").textContent = shogi.print();
+
+shogi.openKifuFile("./sample.kif");
+document.getElementById("ban2").textContent = shogi.print();
+
+document.getElementById("kifu").textContent = JSON.stringify(shogi.getFormat());
+</script>

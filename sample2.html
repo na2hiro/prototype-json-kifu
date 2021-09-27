@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+<script src="shogi.js"></script>
+<pre>
+<script>
+
+//ここではShogiを継承したPrintableShogiを使う
+var shogi = new PrintableShogi(); //{rule: "hirate"}でも読み込めるようにする
+shogi.openRuleFile("hirate");
+shogi.print();
+shogi.move({from: [7,7], to: [7,6]});
+shogi.move({from: [3,3], to: [3,4]});
+shogi.move({from: [8,8], to: [2,2], nari: true});
+shogi.move({from: [3,1], to: [2,2]});
+shogi.move({koma: 5, to: [4,5]});
+shogi.print();
+
+var shogi = new PrintableShogi({/*ruleObject: ruleObj*/});
+/*document.write(shogi.print());
+shogi.goto(0);
+document.write(shogi.print());
+shogi.goto(112);
+document.write(shogi.print());*/
+var plugin = new ShogiPlugin(shogi);
+plugin.openRuleFile("hirate.rule.json");
+plugin.openKifuFile("./sample.kif");
+plugin.print();
+</script>

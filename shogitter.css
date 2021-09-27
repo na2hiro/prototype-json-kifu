@@ -1,0 +1,83 @@
+.shogitter .inlineblock{
+	display:inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+.shogitter .mochi.info{
+	overflow: scroll;
+	font-size: small;
+}
+.shogitter .mochi.info dl{
+	margin-top:0;
+	margin-bottom:0;
+	text-align:left;
+}
+.shogitter .mochi.info dl dt{
+	font-weight: bold;
+	clear: both;
+	float : left;
+	margin-right: 3px;
+	background-color: #eee;
+}
+.shogitter .mochi.info dl dd{
+	margin-left:20px;
+}
+
+.shogitter select.kifulist{font-size:15px;width:100%;height:100%}
+.shogitter table.ban{border-collapse: collapse;}
+.shogitter table.ban th{white-space:nowrap;}
+.shogitter table.ban td{
+	border: 1px #000000 solid;
+	background-color:#FDD775;
+	padding:0px;
+}
+.shogitter table.ban td, .shogitter table.ban td img, .shogitter div.mochimain span.mochigoma img, .shogitter div.mochi div.mochimain span.mochigoma{
+	padding: 0;
+	border-spacing:0;
+	width:32px;
+	height:36px;
+	vertical-align:middle;
+}
+.shogitter table.ban td.lastto{background-color: #FF9900;}
+.shogitter table.ban td.lastfrom{background-color: #FFCC00;}
+.shogitter table.ban td.movable{background-color: #AAAAFF;}
+.shogitter div.mochi{
+	height:50%;width:150px;
+}
+.shogitter div.mochi div.mochimain{
+	width:100%;height:100%;margin-bottom:0;margin-top:auto;
+}
+.shogitter div.mochi div.mochimain span.mochigoma{
+	position:relative;
+}
+.shogitter div.mochi div.mochimain span.mochigoma span.maisuu{
+	display: inline;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	color:blue;
+}
+.shogitter div.players{
+	height:100%;width:150px;
+}
+.shogitter div.players div.mochi div.tebanname{
+	text-align: center;background-color: silver;
+	margin-bottom:0;margin-top:auto;width:100%;
+}
+.shogitter div.players div.mochi.teban{
+	background-color: #ddd;
+}
+.shogitter div.players div.mochi.teban div.tebanname{
+	text-align: center;background-color: blue; color:white;
+}
+.shogitter div.players div.mochi.teban div.tebanname a{
+	color:white;
+}
+
+.shogitter ul.inline{
+	display:inline;
+	padding-left: 0;
+}
+.shogitter ul.inline li{
+	display:inline;
+}

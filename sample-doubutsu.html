@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+<script src="shogi.js"></script>
+<script src="plugin.js"></script>
+<style type="text/css">p{white-space: pre}</style>
+
+<h1><a href="./rule/doubutsu.rule.json">どうぶつしょうぎルール</a>を読み込む</h1>
+
+<h2>ルールを読み込んだところ</h2>
+<p id="ban1"></p>
+
+<h2>moveメソッドで動かしたところ</h2>
+<p id="ban2"></p>
+
+<h2>棋譜を出力</h2>
+<textarea cols=100 rows=20 id="kifu"></textarea>
+
+<script>
+//Shogiオブジェクトを生成しルール読み込み
+var shogi = new PrintableShogi();	//Shogiを継承したPrintableShogi
+shogi.openRuleFile("doubutsu.rule.json");		//hirateを読み込み
+document.getElementById("ban1").textContent = shogi.print();
+
+//直接操作
+shogi.move({from: [2,3], to: [2,2]});
+shogi.move({from: [1,1], to: [2,2]});
+shogi.move({from: [3,4], to: [2,3]});
+shogi.move({koma: 0, to: [1,3]});
+shogi.move({from: [1,4], to: [1,3]});
+shogi.move({from: [2,2], to: [1,3]});
+shogi.move({from: [2,4], to: [1,3]});
+document.getElementById("ban2").textContent = shogi.print();
+
+document.getElementById("kifu").textContent = JSON.stringify(shogi.getFormat());
+</script>
+<h2>プラグインと組み合わせてもおk</h2>
+<script>
+var plugin = new ShogiPlugin(shogi);
+plugin.print();
+</script>

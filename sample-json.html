@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<script src="shogi.js"></script>
+<style type="text/css">p{white-space: pre}</style>
+
+<h1><a href="sample.json">JSONファイル</a>を読み込み</h1>
+
+<h2>ルールとJSONファイルを読み込んだところ</h2>
+<p id="ban1"></p>
+
+<h2>10手目の局面</h2>
+<p id="ban2"></p>
+
+<h2>投了図</h2>
+<p id="ban3"></p>
+
+<script>
+var shogi = new PrintableShogi();
+shogi.openRuleFile("hirate.rule.json");
+shogi.openKifuFile("./sample.json");
+document.getElementById("ban1").textContent = shogi.print();
+
+shogi.goto(10);
+document.getElementById("ban2").textContent = shogi.print();
+shogi.goto(Infinity);
+document.getElementById("ban3").textContent = shogi.print();
+</script>

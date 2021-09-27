@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<script src="shogi.js"></script>
+<style type="text/css">p{white-space: pre}</style>
+
+<h1><a href="shogi.js">Shogiオブジェクト</a>を直接操作する</h1>
+
+<h2>ルールを読み込んだところ</h2>
+<p id="ban1"></p>
+
+<h2>moveメソッドで動かしたところ</h2>
+<p id="ban2"></p>
+
+<h2>棋譜を出力</h2>
+<textarea cols=100 rows=20 id="kifu"></textarea>
+
+<script>
+//Shogiオブジェクトを生成しルール読み込み
+var shogi = new PrintableShogi();	//Shogiを継承したPrintableShogi
+shogi.openRuleFile("hirate.rule.json");		//hirateを読み込み
+document.getElementById("ban1").textContent = shogi.print();
+
+//直接操作
+shogi.move({from: [7,7], to: [7,6]});
+shogi.move({from: [3,3], to: [3,4]});
+shogi.move({from: [8,8], to: [2,2], nari: true});
+shogi.move({from: [3,1], to: [2,2]});
+shogi.move({koma: 5, to: [4,5]});
+document.getElementById("ban2").textContent = shogi.print();
+
+document.getElementById("kifu").textContent = JSON.stringify(shogi.getFormat());
+</script>

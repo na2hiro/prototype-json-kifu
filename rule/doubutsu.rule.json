@@ -1,0 +1,28 @@
+{
+	"name": {"traditional": "どうぶつしょうぎ"},
+	"filename": "doubutsu.rule.json",
+	"size": [3, 4],
+	"teban": [0,1],
+	"koma": {
+		"0": {"name": {"traditional": "ひよこ"}, "shortname": {"traditional": "雛"}},
+		"1": {"name": {"traditional": "ぞう"}, "shortname": {"traditional": "象"}},
+		"2": {"name": {"traditional": "きりん"}, "shortname": {"traditional": "麒"}},
+		"3": {"name": {"traditional": "ライオン"}, "shortname": {"traditional": "獅"}},
+		"4": {"name": {"traditional": "にわとり"}, "shortname": {"traditional": "鶏"}}
+	},
+	"nari": {
+		"0": 4
+	},
+	"initial": {
+		"ban": [
+			[[1,1],[],   [],   [0,2]],
+			[[1,3],[1,0],[0,0],[0,3]],
+			[[1,2],[],   [],   [0,1]]
+		],
+		"mochigoma": [
+			{},
+			{}
+		],
+		"teban": 0
+	}
+}

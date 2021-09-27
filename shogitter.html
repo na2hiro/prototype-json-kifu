@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Kifu for JS</title>
+		<link rel='stylesheet' type='text/css' href='shogitter.css'>
+		<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="shogi.js"></script>
+		<script type="text/javascript" src="dateformat.js"></script>
+		<script type="text/javascript" src="shogitter.js"></script>
+		<script type="text/javascript">
+			var shogi = new Shogi();
+			shogi.openKifuFile("sample.json");
+			var shogitter = new Shogitter(shogi, "shogitter2");
+			shogitter.init(true);
+		</script>
+	</head>
+	<body>
+		<div id="shogitter2"></div>
+	</body>
+</html>
