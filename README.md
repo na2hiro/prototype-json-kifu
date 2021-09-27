@@ -2,7 +2,7 @@
 
 JSONで将棋の棋譜を表すプロジェクトのプロトタイプと用例集です．
 
-用例集はこちら https://na2hiro.github.io/json-kifu-prototype
+用例集はこちら https://na2hiro.github.io/prototype-json-kifu/
 
 ## このリポジトリについて
 
